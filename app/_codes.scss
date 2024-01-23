@@ -1,0 +1,155 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    background-color: $Off-Black;
+    color: $White;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    .hide-for-mobile{
+        @include breakpoint-down(small){
+            display: none;
+        }
+    }
+    .hide-for-desktop{
+        @include breakpoint-up(large){
+            display: none;
+        }
+    }
+}
+
+.flex{
+    display: flex;
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+    &-jc-sb{
+        justify-content: space-between;
+    }
+}
+
+// desktop css
+
+.container-desktop{
+    .desktop-box{
+        width:  250px;
+        height: 410px;
+        border-radius: 5px;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: $Dark-Grey;
+        .image{
+            border-radius: 50%;
+        }
+        .ecri{
+            margin: 0;
+            padding: 0;
+            display: block;
+            text-align: center;
+            h5{
+                color: $Green;
+                font-size: 12px;
+                margin-top: -15px;
+            }
+            p{
+                font-size: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.box input[type = "button"] {
+    border: 0;
+    background: $Grey;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border:  1px solid $Grey;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 12px;
+    width: 205px;
+    outline: none;
+    color: $White;
+    border-radius: 5px;
+    transition: 0.25s;    
+}
+
+.box input[type = "button"]:hover{
+    background-color: $Green;
+    color: $Dark-Grey;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+
+// mobile css
+
+.container-mobile{
+    .mobile-box{
+        width:  250px;
+        height: 410px;
+        border-radius: 5px;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: $Dark-Grey;
+        .image{
+            border-radius: 50%;
+        }
+        .ecri{
+            margin: 0;
+            padding: 0;
+            display: block;
+            text-align: center;
+            h5{
+                color: $Green;
+                font-size: 12px;
+                margin-top: -15px;
+            }
+            p{
+                font-size: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.box input[type = "button"] {
+    border: 0;
+    background: $Grey;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border:  1px solid $Grey;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 12px;
+    width: 205px;
+    outline: none;
+    color: $White;
+    border-radius: 5px;
+    transition: 0.25s;    
+}
+
+.box input[type = "button"]:hover{
+    background-color: $Green;
+    color: $Dark-Grey;
+    font-weight: 700;
+    cursor: pointer;
+}
